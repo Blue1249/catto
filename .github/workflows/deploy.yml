@@ -1,31 +1,21 @@
-name: Deploy Catto Bot
+name: Deploying Catto Botto
+
+env:
+    DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+    CLASH_TOKEN: ${{ secrets.CLASH_TOKEN }}
+    MONGO_URI: ${{ secrets.MONGO_URI }}
 
 on:
-  push:
-    branches:
-      - main
-
+  workflow_dispatch:
+    inputs:
+        environment:
+            description: 'Environment to run tests against'
+            type: environment
+            required: true
+            
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, x64, catto]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy
-        run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEPLOYMENT_KEY: ${{ secrets.DEPLOYMENT_KEY }}
-          NODE_ENV: production
+        uses: actions/checkout@v4
