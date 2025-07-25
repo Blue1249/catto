@@ -1,8 +1,8 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/JamesAUre/ClanCastleBot"><img src="https://i.imgur.com/ozfC7Gy.png" width="100" height="100" alt="Clan Castle"></a>
+  <a href="https://github.com/Blue1249/catto-botto"><img src="[https://i.imgur.com/ozfC7Gy.png](https://media.discordapp.net/attachments/1382561273732005930/1398145018367311872/otk_swarm_icon.png?ex=68844b84&is=6882fa04&hm=ae2e62cac714feaae27cdc61e95e8caea95a445c2eb2a41901495dbbe2542f2a&=&format=webp&quality=lossless)" width="100" height="100" alt="Clan Castle"></a>
   <br>
-  Wizard
+  CattoBotto
   <br>
 </h1>
 <h4 align="center">The ultimate Clash of Clans Discord stat tracker.</h4>
@@ -34,11 +34,9 @@ Installation is easy, all you need to do is invite the bot to your server and us
 
 We plan to expand and improve existing functionality in the future as well.
 
-# Join the community!
+# Join the TEAM SWARM | OTK community!
 
-This bot was originally intended for usage in the Clash of Clans Discord server, a community server that is officially affiliated with Supercell. This bot is still in production and new features will be added in the future. Our community covers various aspects of the game such as recruitment, strategy, talks with Supercell and general community discussion!
-
-Join us at the [Clash of Clans Discord Server](https://discord.com/invite/clashofclans)!
+Join us at the [TEAM SWARM | OTK Discord Server](https://discord.gg/Ddevkg9FRJ)!
 
 # How to create a new instance
 
@@ -83,8 +81,7 @@ node index
 
 # Authors
 
-- [@Azer](https://www.github.com/JamesIsAzer)
-- [@Hawk Eye](https://github.com/hawkeye7662)
+- [@Blue](https://github.com/Blue1249)
 
 # License
 
