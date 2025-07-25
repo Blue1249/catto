@@ -11,12 +11,12 @@ const getInfo = (verificationCount) => new EmbedBuilder()
     .addFields(
     {
         name: 'Contributors',
-        value: `• Azer - Coding\n• Hawk Eye - Coding\n• Vibe - Testing`,
+        value: `• Blue`,
         inline: true
     },
     {
         name: 'Source code',
-        value: '[Click to view](https://github.com/JamesIsAzer/Wizard)',
+        value: '[Click to view]',
         inline: true
     },
     {
@@ -25,7 +25,7 @@ const getInfo = (verificationCount) => new EmbedBuilder()
         inline: true
     }
 )
-    .setFooter({text: 'Show support by using code Azer', iconURL: 'https://www.deckshop.pro/img/creatorcode/creator_code.png'})
+    .setFooter({text: 'Bot for TEAM SWARM | OTK', iconURL: 'https://media.discordapp.net/attachments/1382561273732005930/1398145018367311872/otk_swarm_icon.png?ex=68844b84&is=6882fa04&hm=ae2e62cac714feaae27cdc61e95e8caea95a445c2eb2a41901495dbbe2542f2a&=&format=webp&quality=losslessg'})
 
 module.exports = {
     getInfo
