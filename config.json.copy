@@ -1,11 +1,11 @@
 {
-    "ownerGuildID": "582085045561458692",
-    "clientID": "691118910631575613",
+    "ownerGuildID": "",
+    "clientID": "",
     "logChannels": {
-        "newVerify": "582092054264545280",
-        "crossVerify": "582092054264545280"
+        "newVerify": "",
+        "crossVerify": ""
     },
-    "leaderboardContestID": "1233223359924404285",
-    "mediumPermRolesID" : ["761865691904606228", "621998190601961473"],
-    "fullPermRolesID" : ["236524828297920522", "243443004969320448", "582089805634994186"]
+    "leaderboardContestID": "",
+    "mediumPermRolesID" : ["", ""],
+    "fullPermRolesID" : ["", "", ""]
 }

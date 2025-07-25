@@ -1,10 +1,5 @@
 name: Deploying Catto Botto
 
-env:
-    DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-    CLASH_TOKEN: ${{ secrets.CLASH_TOKEN }}
-    MONGO_URI: ${{ secrets.MONGO_URI }}
-
 on:
   workflow_dispatch:
     inputs:
@@ -12,6 +7,10 @@ on:
             description: 'Environment to run tests against'
             type: environment
             required: true
+env:
+    DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+    CLASH_TOKEN: ${{ secrets.CLASH_TOKEN }}
+    MONGO_URI: ${{ secrets.MONGO_URI }}    
             
 jobs:
   deploy:
@@ -19,3 +18,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Setup configuration
+        run: |
+          cp config.json.copy config.json
+          cp emojis.json.copy emojis.json
+          cp .env.copy .env
+
+      - name: Run npm install
+        run: npm install
+      - name: deploy-commands.js
+        run: run node deploy-commands.js
+      - name: node index 
+        run: node index
