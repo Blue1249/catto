@@ -16,7 +16,7 @@ const getInfo = (verificationCount) => new EmbedBuilder()
     },
     {
         name: 'Source code',
-        value: '[Click to view]',
+        value: '[Click to view](https://github.com/Blue1249/catto-botto)',
         inline: true
     },
     {
