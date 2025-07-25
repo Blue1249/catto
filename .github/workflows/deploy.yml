@@ -6,15 +6,18 @@ on:
         environment:
             description: 'Environment to run tests against'
             type: environment
-            required: true
-env:
-    DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-    CLASH_TOKEN: ${{ secrets.CLASH_TOKEN }}
-    MONGO_URI: ${{ secrets.MONGO_URI }}    
+            required: true   
             
 jobs:
   deploy:
     runs-on: [self-hosted, Linux, x64, catto]
+    environment: ${{ github.event.inputs.environment }}
+
+    env:
+      DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+      CLASH_TOKEN: ${{ secrets.CLASH_TOKEN }}
+      MONGO_URI: ${{ secrets.MONGO_URI }}    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -28,5 +31,8 @@ jobs:
         run: npm install
       - name: deploy-commands.js
         run: node deploy-commands.js
-      - name: node index 
-        run: node index
+      - name: Start bot with PM2
+        run: |
+          pm2 delete catto-botto || true  
+          pm2 start index.js --name catto-botto
+          pm2 save  
