@@ -37,7 +37,7 @@ client.on('interactionCreate', async (interaction) => {
 client.once('ready', async () => {
   console.log(`${new Date().toString()} Connected to discord!`);
   await connectDB()
-  client.user.setPresence({ activities: [{ name: 'with fireballs 🔥', type: ActivityType.Playing }], status: 'online'})
+  client.user.setPresence({ activities: [{ name: 'SWARM OTK ON TOP' }], status: 'online'})
   scheduleLeaderboards()
   console.log(`${new Date().toString()} Wizard is ready to go!`)
 });
