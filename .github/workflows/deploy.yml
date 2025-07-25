@@ -21,16 +21,23 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Setup configuration
+      - name: Create .env file from secrets
         run: |
-          cp config.json.copy config.json
-          cp emojis.json.copy emojis.json
           echo "DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }}" > .env
           echo "MONGO_URI=${{ secrets.MONGO_URI }}" >> .env
           echo "CLASH_TOKEN=Bearer ${{ secrets.CLASH_TOKEN }}" >> .env
-          
-      - name: Echo secret
-        run: echo "DISCORD_TOKEN is ${{ secrets.DISCORD_TOKEN }}"
+
+
+      - name: Check if token was set
+        run: |
+          if [ -z "${DISCORD_TOKEN}" ]; then
+            echo "❌ DISCORD_TOKEN is missing"
+            exit 1
+          else
+            echo "✅ DISCORD_TOKEN is set"
+          fi
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }} 
 
       - name: Run npm install
         run: npm install
