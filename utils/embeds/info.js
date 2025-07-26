@@ -3,10 +3,10 @@ const client = require('../../client');
 const { prettyNumbers } = require('../format');
 
 const getInfo = (verificationCount) => new EmbedBuilder()
-    .setTitle("Wizard")
+    .setTitle("Catto Botto")
     .setColor('#34C6EB')
     .setDescription(
-        `Wizard enables more cohesion between between Clash of Clans and your Discord server. Track your stats with your community and show off your achievements!`)
+        `Catto Botto enables more cohesion between between Clash of Clans and your Discord server. Track your stats with your community and show off your achievements!`)
     .setThumbnail(client.user.displayAvatarURL())
     .addFields(
     {
